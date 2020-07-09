@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="main_page.css">
+</head>
+<body>
+    
+    <section class="left-section">
+        
+        <div id="left-cover" class="cover hide-cover">
+            <img src="main_page.jpg" alt="">
+            <h1>Welcome !</h1>
+            <h3>Already have an account ?</h3>
+            <button type="button" class="switch-button" onclick="location.reload()">login</button>
+        </div>
+
+        <div id="left-form" class="form fade-in-element">
+            <h1>login</h1>
+            <form method="post" action="../PHP/login.php">
+                <input type="text" name="user-name" class="input-box" placeholder="user name">
+                <input maxlength="20" type="password" name="user-password" class="input-box" placeholder="password">
+                <button type="submit" class="button" name="login-button" >Login</button>
+
+            </form>
+        </div>
+    
+    </section>
+
+    <section class="right-section">
+    
+        <div id="right-cover" class="cover fade-in-element">
+            <img src="main_page.jpg" alt="">
+            <h1>Welcome !</h1><br><br><br>
+            
+            <button type="button" class="switch-button" onclick="switch_Signup()">Signup</button>
+        </div>
+        
+        <div id="right-form" class="form hide-form"> 
+
+            <h1>Signup</h1>
+
+            <form action="../PHP/signup.php" method="post">
+                <input type="text" name="user-name" class="input-box" placeholder="user name">
+                <input type="email" name="user-email" class="inpu-box" placeholder="E-mail">
+                <input type="password" name="user-password" class="input-box" placeholder="password">
+                <input type="password" name="user-confirm-password" class="input-box" placeholder="confirm password">
+                Choose your role<br>
+
+                Admin <input type="radio" name="role" value="admin">
+                student<input type="radio" name="role" value="student">   
+                <button type="submit" class="button" name="signup-button">signup-button</button>
+
+            </form>
+
+        </div>
+
+        <script src="main_page.js"></script>
+
+    </section>
+
+</body>
+</html>
